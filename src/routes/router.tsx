@@ -1,6 +1,11 @@
-import RootLayout from 'layouts/Root';
+import SuspenseComponent from 'components/SuspenseComponent';
+import { lazy } from 'react';
 import { createBrowserRouter } from 'react-router';
 import routes from '.';
+
+const RootLayout = SuspenseComponent(lazy(() => import('layouts/Root')));
+
+const Home = SuspenseComponent(lazy(() => import('pages/Home')));
 
 const router = createBrowserRouter([
     {
@@ -9,7 +14,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: routes.home.path,
-                Component: null,
+                Component: Home,
             },
         ],
     },
