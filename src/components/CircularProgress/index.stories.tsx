@@ -26,6 +26,7 @@ export const Default: Story = {
 export const Small: Story = {
     args: {
         size: 20,
+        color: 'flame600',
     },
 };
 

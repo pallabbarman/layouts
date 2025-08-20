@@ -38,6 +38,15 @@ interface CustomColorVariants {
     flame600: true;
     flame200: true;
     flame100: true;
+    primary: false;
+    secondary: false;
+    error: false;
+    warning: false;
+    info: false;
+    success: false;
+    textPrimary: false;
+    textSecondary: false;
+    textDisabled: false;
 }
 
 declare module '@mui/material/styles' {
@@ -98,9 +107,20 @@ declare module '@mui/material/Typography' {
     interface TypographyPropsVariantOverrides
         extends CustomTypographyVariants {}
 }
+declare module '@mui/material/Typography' {
+    interface TypographyPropsColorOverrides extends CustomColorVariants {}
+}
 
 declare module '@mui/material/Button' {
     interface ButtonPropsColorOverrides extends CustomColorVariants {}
+}
+
+declare module '@mui/material/CircularProgress' {
+    interface CircularProgressPropsColorOverrides extends CustomColorVariants {}
+}
+
+declare module '@mui/material/Chip' {
+    interface ChipPropsColorOverrides extends CustomColorVariants {}
 }
 
 const theme = createTheme({

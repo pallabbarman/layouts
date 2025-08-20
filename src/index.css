@@ -1,4 +1,21 @@
 :root {
+    --white: #ffffff;
+    --black: #050f10;
+    --grey1000: #3d3d3d;
+    --grey800: #707070;
+    --grey600: #999999;
+    --grey400: #c2c2c2;
+    --grey200: #ebebeb;
+    --grey100: #f8f8f8;
+    --moonstone900: #22686d;
+    --moonstone600: #48bdca;
+    --moonstone200: #d0eef0;
+    --moonstone100: #eff9fa;
+    --flame800: #b83d14;
+    --flame600: #e56138;
+    --flame200: #f9d4c8;
+    --flame100: #fdf1ed;
+
     --font-family-open-sans: 'Open Sans', sans-serif;
     --font-family-montserrat: Montserrat, sans-serif;
 }
