@@ -74,7 +74,6 @@ declare module '@mui/material/styles' {
         grey100: Palette['primary'];
         moonstone900: Palette['primary'];
         moonstone600: Palette['primary'];
-        moonstone400: Palette['primary'];
         moonstone200: Palette['primary'];
         moonstone100: Palette['primary'];
         flame800: Palette['primary'];
@@ -93,7 +92,6 @@ declare module '@mui/material/styles' {
         grey100?: PaletteOptions['primary'];
         moonstone900?: PaletteOptions['primary'];
         moonstone600?: PaletteOptions['primary'];
-        moonstone400?: PaletteOptions['primary'];
         moonstone200?: PaletteOptions['primary'];
         moonstone100?: PaletteOptions['primary'];
         flame800?: PaletteOptions['primary'];
@@ -125,7 +123,19 @@ declare module '@mui/material/Chip' {
 
 const theme = createTheme({
     colorSchemes: {
-        dark: true,
+        light: true,
+        dark: {
+            palette: {
+                black: {
+                    contrastText: '#ffffff',
+                    main: '#050F10',
+                },
+                white: {
+                    contrastText: '#22686D',
+                    main: '#FFFFFF',
+                },
+            },
+        },
     },
     typography: {
         fontFamily: 'var(--font-family-open-sans)',
